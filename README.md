@@ -1,19 +1,38 @@
-# URL Shortening project
+# Tiny URL
 
-## Prerequisites:
-For test and run this project you just need to have `mvn` command in your path.
+**Tiny URL** is a modern scalable url shortner service written in java,taking advantage of recent edge technologies such as docker and H2.   
 
-## Run all tests:
-There are several integration and unit tests for project, you can run them by this command:
+## Key Features
 
-    mvn test
+* Open Source
+* Powered with Docker Scalability feature
+* provided Api to use in Microservice architecture
 
-## Run project:
-In order to run this project you need to run this command:
 
-    mvn spring-boot:run
+### Stack
+
+* Java8
+* Spring Boot
+* JUnit
+* Mockito
+* maven
+* Docker
+
+### Setup and Run
+
+You need to have Java 8 jdk installed on you system
+
+1. Clone this repository
+2. To package jar file and create the app image execute the following command in **tiny-url** directory: 
+	
+	mvn clean package docker:build
+
+3. 
+## To run the system: 
+    docker-compose up -d 
     
-## How to shorten a URL:
+4. 
+## How to Tiny a URL:
 In order to shortening a url you should use this rest api:
 
 url: `localhost:8080/api/v1/url/shorten`
@@ -37,6 +56,13 @@ failure response body (http status `400`):
     {
         "errorMessage": "The URL entered is invalid"
     }
+
+5.
 ## Redirect URL:
 hit `http://localhost:8080/tiny/xyz` url. 
 It will redirect to https://www.neueda.com/about-us
+
+6.
+## Running the tests
+
+To run the tests :    `mvn test`
