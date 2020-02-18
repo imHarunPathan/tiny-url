@@ -27,12 +27,10 @@ You need to have Java 8 jdk installed on you system
 	
 	mvn clean package docker:build
 
-3. 
-## To run the system: 
+##3. To run the system: 
     docker-compose up -d 
     
-4. 
-## How to Tiny a URL:
+##4. How to Tiny a URL:
 In order to shortening a url you should use this rest api:
 
 url: `localhost:8080/api/v1/url/shorten`
@@ -57,12 +55,10 @@ failure response body (http status `400`):
         "errorMessage": "The URL entered is invalid"
     }
 
-5.
-## Redirect URL:
+##5. Redirect URL:
 hit `http://localhost:8080/tiny/xyz` url. 
 It will redirect to https://www.neueda.com/about-us
 
-6.
-## Running the tests
+##6.Running the tests
 
 To run the tests :    `mvn test`
